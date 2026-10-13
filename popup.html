@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SpatialWave</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="brand-icon">◉</div>
+      <div>
+        <h1>SPATIAL<span>WAVE</span></h1>
+        <p>REALTIME SPATIAL AUDIO</p>
+      </div>
+      <div class="live-dot" id="liveDot"></div>
+    </header>
+
+    <section class="status-panel">
+      <div>
+        <div class="eyebrow">ENGINE STATUS</div>
+        <strong id="status">STANDBY</strong>
+      </div>
+      <div class="meter" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i>
+        <i></i><i></i><i></i><i></i><i></i>
+        <i></i><i></i><i></i><i></i><i></i>
+      </div>
+    </section>
+
+    <button id="startButton" class="primary"><span>▶</span> 変換を開始</button>
+    <button id="stopButton" class="secondary" disabled>■ 変換を停止</button>
+    <div id="error" class="error" role="alert"></div>
+
+    <section class="controls">
+      <div class="section-heading">
+        <h2>音響パラメーター</h2>
+        <span>DSP CONTROL</span>
+      </div>
+
+      <label class="toggle-row">
+        <span><strong>空間音響エフェクト</strong><small>Spatial processing</small></span>
+        <input id="enabled" type="checkbox" checked>
+      </label>
+
+      <label class="control">
+        <span><b>立体感</b><output id="intensityValue">65%</output></span>
+        <input id="intensity" type="range" min="0" max="100" value="65">
+      </label>
+      <label class="control">
+        <span><b>ステレオ幅</b><output id="widthValue">55%</output></span>
+        <input id="width" type="range" min="0" max="100" value="55">
+      </label>
+      <label class="control">
+        <span><b>残響</b><output id="reverbValue">18%</output></span>
+        <input id="reverb" type="range" min="0" max="100" value="18">
+      </label>
+      <label class="control">
+        <span><b>音源方向</b><output id="directionValue">0°</output></span>
+        <input id="direction" type="range" min="-90" max="90" value="0">
+        <div class="range-labels"><span>左 −90°</span><span>中央</span><span>右 +90°</span></div>
+      </label>
+      <label class="control">
+        <span><b>出力音量</b><output id="volumeValue">80%</output></span>
+        <input id="volume" type="range" min="0" max="100" value="80">
+      </label>
+    </section>
+
+    <footer><span>HEADPHONES RECOMMENDED</span><span>v1.0.0</span></footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
