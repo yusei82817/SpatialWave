@@ -1,0 +1,2 @@
+# SpatialWave
+SpatialWave 音源をリアルタイムで立体音響風に変換する拡張機能
