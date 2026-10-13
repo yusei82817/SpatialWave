@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "SpatialWave",
+  "version": "1.0.0",
+  "description": "リアルタイムHRTF・サラウンド風音声変換",
+  "permissions": ["tabCapture", "offscreen"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "SpatialWave",
+    "default_popup": "popup.html"
+  }
+}
